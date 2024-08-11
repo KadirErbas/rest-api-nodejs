@@ -1,5 +1,5 @@
 import express from "express";
-import { readUsersFromFile, writeUsersToFile, deleteUserByIdFromFile } from "../controllers/UserControllers.js";
+import { readUsersFromFile, writeUsersToFile, deleteUserByIdFromFile, putUserByIdToFile } from "../controllers/UserControllers.js";
 
 const router = express.Router();
 
@@ -38,6 +38,20 @@ router.delete('/users/:id', (req, res) => {
         res.status(500).json({ message: 'Internal server error' });
     }
 });
+
+// PUT route to update a user by ID
+router.put('/users/:id', (req, res) => {
+    const userId = req.params.id;
+    const updatedUser = req.body;
+
+    try {
+        putUserByIdToFile(userId, updatedUser);
+        res.status(200).json({ message: 'User updated successfully' });
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
 
 // GET route to retrieve all users
 router.get('/users', (req, res) => {

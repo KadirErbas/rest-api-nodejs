@@ -47,3 +47,26 @@ export function deleteUserByIdFromFile(userId) {
         console.error('Error deleting the user:', err.message);
     }
 }
+
+// Function to update a user by ID in the JSON file
+export function putUserByIdToFile(userId, updatedUser) {
+    try {
+        // Read the current users from the file
+        const users = readUsersFromFile();
+
+        // Find the index of the user to update
+        const userIndex = users.findIndex(user => user.id === userId);
+
+        if (userIndex === -1) {
+            throw new Error('User not found');
+        }
+
+        // Update the user at the found index
+        users[userIndex] = { ...users[userIndex], ...updatedUser };
+
+        // Write the updated users back to the file
+        writeUsersToFile(users);
+    } catch (err) {
+        console.error('Error updating the user:', err.message);
+    }
+}
