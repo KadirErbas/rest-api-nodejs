@@ -10,7 +10,7 @@
       },
       {
         "id": "2",
-        "username": "alicew",
+        "username": "kadir3",
         "email": "alicew@example.com",
         "first_name": "Alice",
         "last_name": "Williams"
@@ -21,13 +21,6 @@
         "email": "bobsmith@example.com",
         "first_name": "Bob",
         "last_name": "Smith"
-      },
-      {
-        "id": "4",
-        "username": "janedoe2",
-        "email": "janedoe2@example.com",
-        "first_name": "Jane2",
-        "last_name": "Doe2"
       },
       {
         "id": "5",
