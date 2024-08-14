@@ -47,7 +47,9 @@ router.put('/users/:id', (req, res) => {
     try {
         putUserByIdToFile(userId, updatedUser);
         res.status(200).json({ message: 'User updated successfully' });
+        
     } catch (err) {
+        logger.warn("put hatası");
         res.status(500).json({ message: err.message });
     }
 });
@@ -63,7 +65,7 @@ router.get('/users', (req, res) => {
 
 // Dummy GET route for the root path
 router.get('/', (req, res) => {
-    res.status(200).json({"deneme":"Api çalışıyor!"});
+    res.status(200).json({"info":"kullanıcı apisine hoşgeldiniz!"});
 });
 
 export default router;

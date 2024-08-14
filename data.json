@@ -28,6 +28,13 @@
         "email": "janedoe2@example.com",
         "first_name": "Jane2",
         "last_name": "Doe2"
+      },
+      {
+        "id": "8",
+        "username": "johndoe",
+        "email": "johndoe@example.com",
+        "first_name": "John",
+        "last_name": "Doe"
       }
     ]
   }
