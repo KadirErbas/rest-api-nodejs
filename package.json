@@ -21,7 +21,12 @@
     "@opentelemetry/sdk-node": "^0.52.1",
     "@opentelemetry/sdk-trace-node": "^1.25.1",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "log4js": "^6.9.1",
+    "pino": "^9.3.2",
+    "pino-pretty": "^11.2.2",
+    "winston": "^3.14.1",
+    "winston-syslog": "^2.7.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"

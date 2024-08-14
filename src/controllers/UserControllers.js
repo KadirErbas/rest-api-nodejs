@@ -1,4 +1,6 @@
 import fs from 'node:fs';
+import logger from '../logger.js';
+
 
 // Path to the JSON file
 const dataFilePath = './data.json';
@@ -24,10 +26,15 @@ export function readUsersFromFile()  {
 // Function to write the users back to the JSON file
 export function writeUsersToFile(users) {
     try {
+        console.log(users[0]);
+
         // Wrap the users in an array and add a users key
         const jsonData = [{ users }];
         fs.writeFileSync(dataFilePath, JSON.stringify(jsonData, null, 2));
+        console.log(jsonData);
+        logger.info(jsonData + "kullanıcı kaydedildi!");
     } catch (err) {
+        logger.warn(err);
         console.error('Error writing to the file:', err);
     }
 };
