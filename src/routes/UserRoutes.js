@@ -1,5 +1,7 @@
 import express from "express";
 import { readUsersFromFile, writeUsersToFile, deleteUserByIdFromFile, putUserByIdToFile } from "../controllers/UserControllers.js";
+// import User from "./models/user.js"; 
+
 
 const router = express.Router();
 

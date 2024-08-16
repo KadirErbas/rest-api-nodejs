@@ -6,7 +6,7 @@ import os from "os";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const logFilePath = join(__dirname, 'logs', 'access.log')
+const logFilePath = join(__dirname, '../logs', 'access.log')
 
 const logger = createLogger({
   format: format.combine(
@@ -31,9 +31,9 @@ const logger = createLogger({
   ]
 });
 
-
-
 export default logger;
+
+
 /*
 const { combine, timestamp, label, printf } = format;
 
