@@ -6,6 +6,7 @@ const router = express.Router();
 
 
 const filePath= '/home/sysadmin/logs/bank_application.log';
+// docker volume
 
 router.get('/', (req, res) => {
     res.status(200).json({"info":"loglar hoşgeldiniz!"});
