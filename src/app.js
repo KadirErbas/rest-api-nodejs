@@ -65,6 +65,8 @@ app.use('/api', cardRoutes);
 
 app.use('/logs', logRoutes)
 
+
+
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
