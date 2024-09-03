@@ -3,11 +3,11 @@ import { getAccounts, getAccountById, createAccount, updateAccount, deleteAccoun
 
 const router = express.Router();
 
-router.get('/accounts', getAccounts);
-router.get('/accounts/:id', getAccountById);
-router.post('/accounts', createAccount);
-router.put('/accounts/:id', updateAccount);
-router.patch('/accounts/:id', updateAccount); // Kısmi güncelleme için aynı controller'ı kullanabilirsiniz
-router.delete('/accounts/:id', deleteAccount);
+router.get('/', getAccounts);
+router.get('/:id', getAccountById);
+router.post('/', createAccount);
+router.put('/:id', updateAccount);
+router.patch('/:id', updateAccount); // Kısmi güncelleme için aynı controller'ı kullanabilirsiniz
+router.delete('/:id', deleteAccount);
 
 export default router;
