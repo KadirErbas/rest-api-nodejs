@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  web:
+    build:
+      context: .
+    ports:
+      - "4020:4020"
+    volumes:
+      - .:/home/sysadmin/my-rest-api/rest-api-nodejs
+      - /home/sysadmin/http_logs/bank.log:/home/sysadmin/http_logs/bank.log
+    command: ["npm", "start"]
+    environment:
+      - NODE_ENV=development
+      - DB_HOST=10.150.238.233
+      - DB_USER=postgres
+      - DB_PASSWORD=1
+      - DB_NAME=nodejs
+    depends_on:
+      - db
+
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1
+      POSTGRES_DB: nodejs
+    ports: 
+      - "5434:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

@@ -1,85 +1,30 @@
 import express from 'express';
-import Employee from '../models/Employee.js';
+import {
+    getEmployees,
+    getEmployeeById,
+    createEmployee,
+    updateEmployee,
+    deleteEmployee
+} from '../controllers/EmployeeController.js';
 
 const router = express.Router();
 
 // Get all employees
-router.get('/employees', async (req, res) => {
-    try {
-        const employees = await Employee.findAll();
-        res.json(employees);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
+router.get('/', getEmployees);
 
 // Get employee by ID
-router.get('/employees/:id', async (req, res) => {
-    try {
-        const employee = await Employee.findByPk(req.params.id);
-        if (employee) {
-            res.json(employee);
-        } else {
-            res.status(404).json({ message: 'Employee not found' });
-        }
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
+router.get('/:id', getEmployeeById);
 
 // Create new employee
-router.post('/employees', async (req, res) => {
-    try {
-        const employee = await Employee.create(req.body);
-        res.status(201).json(employee);
-    } catch (error) {
-        res.status(400).json({ error: error.message });
-    }
-});
+router.post('/', createEmployee);
 
 // Update employee by ID
-router.put('/employees/:id', async (req, res) => {
-    try {
-        const employee = await Employee.findByPk(req.params.id);
-        if (employee) {
-            await employee.update(req.body);
-            res.json(employee);
-        } else {
-            res.status(404).json({ message: 'Employee not found' });
-        }
-    } catch (error) {
-        res.status(400).json({ error: error.message });
-    }
-});
+router.put('/:id', updateEmployee);
 
 // Partial update employee by ID
-router.patch('/employees/:id', async (req, res) => {
-    try {
-        const employee = await Employee.findByPk(req.params.id);
-        if (employee) {
-            await employee.update(req.body);
-            res.json(employee);
-        } else {
-            res.status(404).json({ message: 'Employee not found' });
-        }
-    } catch (error) {
-        res.status(400).json({ error: error.message });
-    }
-});
+router.patch('/:id', updateEmployee); // Using the same controller for partial updates
 
 // Delete employee by ID
-router.delete('/employees/:id', async (req, res) => {
-    try {
-        const employee = await Employee.findByPk(req.params.id);
-        if (employee) {
-            await employee.destroy();
-            res.json({ message: 'Employee deleted' });
-        } else {
-            res.status(404).json({ message: 'Employee not found' });
-        }
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
+router.delete('/:id', deleteEmployee);
 
 export default router;
