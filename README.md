@@ -36,6 +36,5 @@ DB_PORT = 5432
 ´´´
 4. Projeyi Başlatın:
 ´´´bash
-npm start
+´npm start
 ´´´
-´asd
