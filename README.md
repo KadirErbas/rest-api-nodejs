@@ -38,3 +38,15 @@ DB_PORT = 5432
 ```bash
 npm start
 ```
+
+## API Uç Noktaları:
+- Get İsteği:
+` http://10.150.238.233:4020/api/users  --> kullanıcıları gösterir
+- Post İsteği:
+` http://10.150.238.233:4020/api/users --> 
+{
+    "name":"example",
+    "email":"example@gmail.com",
+    "password":"123"
+}
+kullanıcı kaydedilir
