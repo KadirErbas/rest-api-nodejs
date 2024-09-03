@@ -41,9 +41,9 @@ npm start
 
 ## API Uç Noktaları:
 - Get İsteği:
-` http://10.150.238.233:4020/api/users  --> kullanıcıları gösterir
+` http://localhost:4000/api/users  --> kullanıcıları gösterir
 - Post İsteği:
-` http://10.150.238.233:4020/api/users --> 
+` http://localhost:4000/api/users --> 
 {
     "name":"example",
     "email":"example@gmail.com",
