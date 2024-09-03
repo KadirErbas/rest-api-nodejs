@@ -15,7 +15,7 @@ Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin.
 
 1. **Depoyu Klonlayın:**
 ```bash
-git clone [https](https://github.com/KadirErbas/rest-api-nodejs)
+git clone https://github.com/KadirErbas/rest-api-nodejs
 cd rest-api-nodejs
 ```
 2. Bağımlılıkları Yükleyin:
