@@ -44,7 +44,7 @@ DB_PORT = 5432
 
 
 ## API Uç Noktaları:
-Aşağıda örnek olması açısından 2 http isteği yer almaktadır
+Aşağıda örnek olması açısından birkaç http isteği yer almaktadır
 - Get İsteği -  Kullanıcıları Gösterme
 > http://localhost:4000/api/users 
 - Post İsteği - Kullanıcı Kaydetme
