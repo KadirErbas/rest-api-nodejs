@@ -24,7 +24,7 @@ npm install
 ```
 3. Ortam Değişkenlerini Ayarlayın:
 '.env' dosyası oluşturun ve gerekli ortam değişkenlerini tanımlayın. Örnek bir '.env' dosyası:
-´´´bash
+```bash
 PORT = 4000
 DB_NAME = bankapp
 DB_USER = postgres
@@ -33,8 +33,8 @@ DB_HOST = localhost
 NODE_ENV = development
 WEB_PORT = 3000
 DB_PORT = 5432
-´´´
+```
 4. Projeyi Başlatın:
-´´´bash
-´npm start
-´´´
+```bash
+npm start
+```
