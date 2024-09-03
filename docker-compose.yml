@@ -4,7 +4,7 @@ services:
     build:
       context: .
     ports:
-      - "${WEB_PORT}:4020"
+      - "${WEB_PORT}:${PORT}"
     volumes:
       - .:/home/sysadmin/my-rest-api/rest-api-nodejs
       - /home/sysadmin/http_logs/bank.log:/home/sysadmin/http_logs/bank.log
