@@ -23,7 +23,8 @@ cd rest-api-nodejs
 npm install
 ```
 
-3. Ortam Değişkenlerini Ayarlayın:
+3. **Ortam Değişkenlerini Ayarlayın:**
+   
 '.env' dosyası oluşturun ve gerekli ortam değişkenlerini tanımlayın. Örnek bir '.env' dosyası:
 ```bash
 PORT = 4000
@@ -36,7 +37,7 @@ WEB_PORT = 3000
 DB_PORT = 5432
 ```
 
-4. Projeyi Başlatın:
+4. **Projeyi Başlatın:**
 ```
 > npm start
 ```
