@@ -1,0 +1,768 @@
+id: a59d0100-6f33-11ef-829e-c1913ba057f7
+revision: 2
+outputs:
+  default:
+    type: elasticsearch
+    hosts:
+      - 'http://localhost:9200'
+    username: 'elastic'
+    password: '${ELASTIC_PASSWORD}'
+output_permissions:
+  default:
+    _elastic_agent_monitoring:
+      indices:
+        - names:
+            - logs-elastic_agent.apm_server-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elastic_agent.apm_server-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - logs-elastic_agent.auditbeat-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elastic_agent.auditbeat-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - logs-elastic_agent.cloud_defend-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - logs-elastic_agent.cloudbeat-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elastic_agent.cloudbeat-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - logs-elastic_agent-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elastic_agent.elastic_agent-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elastic_agent.endpoint_security-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - logs-elastic_agent.endpoint_security-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - logs-elastic_agent.filebeat_input-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elastic_agent.filebeat_input-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - logs-elastic_agent.filebeat-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elastic_agent.filebeat-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - logs-elastic_agent.fleet_server-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elastic_agent.fleet_server-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - logs-elastic_agent.heartbeat-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elastic_agent.heartbeat-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - logs-elastic_agent.metricbeat-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elastic_agent.metricbeat-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - logs-elastic_agent.osquerybeat-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elastic_agent.osquerybeat-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - logs-elastic_agent.packetbeat-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elastic_agent.packetbeat-default
+          privileges:
+            - auto_configure
+            - create_doc
+    _elastic_agent_checks:
+      cluster:
+        - monitor
+    cdc1f39f-9e69-4eee-98dd-88348fcd7d9e:
+      indices:
+        - names:
+            - logs-system.auth-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - logs-system.syslog-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - logs-system.application-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - logs-system.security-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - logs-system.system-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-system.cpu-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-system.diskio-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-system.filesystem-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-system.fsstat-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-system.load-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-system.memory-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-system.network-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-system.process-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-system.process.summary-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-system.socket_summary-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-system.uptime-default
+          privileges:
+            - auto_configure
+            - create_doc
+    47028fa5-04bf-4c86-b9c0-e6fba5bee7d9:
+      indices:
+        - names:
+            - logs-elasticsearch.audit-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - logs-elasticsearch.deprecation-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - logs-elasticsearch.gc-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - logs-elasticsearch.server-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - logs-elasticsearch.slowlog-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elasticsearch.stack_monitoring.ccr-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elasticsearch.stack_monitoring.cluster_stats-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elasticsearch.stack_monitoring.enrich-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elasticsearch.stack_monitoring.index-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elasticsearch.stack_monitoring.index_recovery-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elasticsearch.stack_monitoring.index_summary-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elasticsearch.ingest_pipeline-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elasticsearch.stack_monitoring.ml_job-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elasticsearch.stack_monitoring.node-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elasticsearch.stack_monitoring.node_stats-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elasticsearch.stack_monitoring.pending_tasks-default
+          privileges:
+            - auto_configure
+            - create_doc
+        - names:
+            - metrics-elasticsearch.stack_monitoring.shard-default
+          privileges:
+            - auto_configure
+            - create_doc
+agent:
+  download:
+    sourceURI: 'https://artifacts.elastic.co/downloads/'
+  monitoring:
+    enabled: true
+    use_output: default
+    namespace: default
+    logs: true
+    metrics: true
+  features: {}
+inputs:
+  - id: logfile-system-cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+    name: system-2
+    revision: 1
+    type: logfile
+    use_output: default
+    meta:
+      package:
+        name: system
+        version: 1.31.1
+    data_stream:
+      namespace: default
+    package_policy_id: cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+    streams:
+      - id: logfile-system.auth-cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+        data_stream:
+          dataset: system.auth
+          type: logs
+        ignore_older: 72h
+        paths:
+          - /var/log/auth.log*
+          - /var/log/secure*
+        exclude_files:
+          - .gz$
+        multiline:
+          pattern: ^\s
+          match: after
+        tags:
+          - system-auth
+        processors:
+          - add_locale: null
+      - id: logfile-system.syslog-cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+        data_stream:
+          dataset: system.syslog
+          type: logs
+        paths:
+          - /var/log/messages*
+          - /var/log/syslog*
+          - /var/log/system*
+        exclude_files:
+          - .gz$
+        multiline:
+          pattern: ^\s
+          match: after
+        processors:
+          - add_locale: null
+        ignore_older: 72h
+  - id: winlog-system-cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+    name: system-2
+    revision: 1
+    type: winlog
+    use_output: default
+    meta:
+      package:
+        name: system
+        version: 1.31.1
+    data_stream:
+      namespace: default
+    package_policy_id: cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+    streams:
+      - id: winlog-system.application-cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+        name: Application
+        data_stream:
+          dataset: system.application
+          type: logs
+        condition: '${host.platform} == ''windows'''
+        ignore_older: 72h
+      - id: winlog-system.security-cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+        name: Security
+        data_stream:
+          dataset: system.security
+          type: logs
+        condition: '${host.platform} == ''windows'''
+        ignore_older: 72h
+      - id: winlog-system.system-cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+        name: System
+        data_stream:
+          dataset: system.system
+          type: logs
+        condition: '${host.platform} == ''windows'''
+        ignore_older: 72h
+  - id: system/metrics-system-cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+    name: system-2
+    revision: 1
+    type: system/metrics
+    use_output: default
+    meta:
+      package:
+        name: system
+        version: 1.31.1
+    data_stream:
+      namespace: default
+    package_policy_id: cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+    streams:
+      - id: system/metrics-system.cpu-cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+        data_stream:
+          dataset: system.cpu
+          type: metrics
+        metricsets:
+          - cpu
+        cpu.metrics:
+          - percentages
+          - normalized_percentages
+        period: 10s
+      - id: system/metrics-system.diskio-cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+        data_stream:
+          dataset: system.diskio
+          type: metrics
+        metricsets:
+          - diskio
+        diskio.include_devices: null
+        period: 10s
+      - id: system/metrics-system.filesystem-cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+        data_stream:
+          dataset: system.filesystem
+          type: metrics
+        metricsets:
+          - filesystem
+        period: 1m
+        processors:
+          - drop_event.when.regexp:
+              system.filesystem.mount_point: ^/(sys|cgroup|proc|dev|etc|host|lib|snap)($|/)
+      - id: system/metrics-system.fsstat-cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+        data_stream:
+          dataset: system.fsstat
+          type: metrics
+        metricsets:
+          - fsstat
+        period: 1m
+        processors:
+          - drop_event.when.regexp:
+              system.fsstat.mount_point: ^/(sys|cgroup|proc|dev|etc|host|lib|snap)($|/)
+      - id: system/metrics-system.load-cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+        data_stream:
+          dataset: system.load
+          type: metrics
+        metricsets:
+          - load
+        condition: '${host.platform} != ''windows'''
+        period: 10s
+      - id: system/metrics-system.memory-cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+        data_stream:
+          dataset: system.memory
+          type: metrics
+        metricsets:
+          - memory
+        period: 10s
+      - id: system/metrics-system.network-cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+        data_stream:
+          dataset: system.network
+          type: metrics
+        metricsets:
+          - network
+        period: 10s
+        network.interfaces: null
+      - id: system/metrics-system.process-cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+        data_stream:
+          dataset: system.process
+          type: metrics
+        metricsets:
+          - process
+        period: 10s
+        process.include_top_n.by_cpu: 5
+        process.include_top_n.by_memory: 5
+        process.cmdline.cache.enabled: true
+        process.cgroups.enabled: false
+        process.include_cpu_ticks: false
+        processes:
+          - .*
+      - id: >-
+          system/metrics-system.process.summary-cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+        data_stream:
+          dataset: system.process.summary
+          type: metrics
+        metricsets:
+          - process_summary
+        period: 10s
+      - id: >-
+          system/metrics-system.socket_summary-cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+        data_stream:
+          dataset: system.socket_summary
+          type: metrics
+        metricsets:
+          - socket_summary
+        period: 10s
+      - id: system/metrics-system.uptime-cdc1f39f-9e69-4eee-98dd-88348fcd7d9e
+        data_stream:
+          dataset: system.uptime
+          type: metrics
+        metricsets:
+          - uptime
+        period: 10s
+  - id: logfile-elasticsearch-47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+    name: elasticsearch-1
+    revision: 1
+    type: logfile
+    use_output: default
+    meta:
+      package:
+        name: elasticsearch
+        version: 1.5.0
+    data_stream:
+      namespace: default
+    package_policy_id: 47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+    streams:
+      - id: logfile-elasticsearch.audit-47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+        data_stream:
+          dataset: elasticsearch.audit
+          type: logs
+        paths:
+          - /var/log/elasticsearch/*_audit.json
+        exclude_files:
+          - .gz$
+        processors:
+          - add_locale: null
+          - add_fields:
+              target: ''
+              fields:
+                ecs.version: 1.10.0
+          - decode_json_fields:
+              fields:
+                - message
+              target: _json
+          - rename:
+              fields:
+                - from: _json.request.body
+                  to: _request
+              ignore_missing: true
+          - drop_fields:
+              fields:
+                - _json
+          - detect_mime_type:
+              field: _request
+              target: http.request.mime_type
+          - drop_fields:
+              fields:
+                - _request
+              ignore_missing: true
+      - id: logfile-elasticsearch.deprecation-47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+        data_stream:
+          dataset: elasticsearch.deprecation
+          type: logs
+        paths:
+          - /var/log/elasticsearch/*_deprecation.json
+        exclude_files:
+          - .gz$
+          - _slowlog.log$
+          - _access.log$
+      - id: logfile-elasticsearch.gc-47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+        data_stream:
+          dataset: elasticsearch.gc
+          type: logs
+        paths:
+          - '/var/log/elasticsearch/gc.log.[0-9]*'
+          - /var/log/elasticsearch/gc.log
+        exclude_files:
+          - .gz$
+        exclude_lines:
+          - '^(OpenJDK|Java HotSpot).* Server VM '
+          - '^CommandLine flags: '
+          - '^Memory: '
+          - '^{'
+        multiline:
+          pattern: '^(\[?[0-9]{4}-[0-9]{2}-[0-9]{2}|{)'
+          negate: true
+          match: after
+        processors:
+          - add_fields:
+              target: ''
+              fields:
+                ecs.version: 1.10.0
+      - id: logfile-elasticsearch.server-47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+        data_stream:
+          dataset: elasticsearch.server
+          type: logs
+        paths:
+          - /var/log/elasticsearch/*_server.json
+        exclude_files:
+          - .gz$
+          - _slowlog.log$
+          - _access.log$
+          - _deprecation.log$
+      - id: logfile-elasticsearch.slowlog-47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+        data_stream:
+          dataset: elasticsearch.slowlog
+          type: logs
+        paths:
+          - /var/log/elasticsearch/*_index_search_slowlog.json
+          - /var/log/elasticsearch/*_index_indexing_slowlog.json
+        exclude_files:
+          - .gz$
+  - id: elasticsearch/metrics-elasticsearch-47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+    name: elasticsearch-1
+    revision: 1
+    type: elasticsearch/metrics
+    use_output: default
+    meta:
+      package:
+        name: elasticsearch
+        version: 1.5.0
+    data_stream:
+      namespace: default
+    package_policy_id: 47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+    streams:
+      - id: >-
+          elasticsearch/metrics-elasticsearch.stack_monitoring.ccr-47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+        data_stream:
+          dataset: elasticsearch.stack_monitoring.ccr
+          type: metrics
+        metricsets:
+          - ccr
+        hosts:
+          - 'http://localhost:9200'
+        scope: node
+        period: 10s
+        ssl: null
+      - id: >-
+          elasticsearch/metrics-elasticsearch.stack_monitoring.cluster_stats-47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+        data_stream:
+          dataset: elasticsearch.stack_monitoring.cluster_stats
+          type: metrics
+        metricsets:
+          - cluster_stats
+        hosts:
+          - 'http://localhost:9200'
+        scope: node
+        period: 10s
+        ssl: null
+      - id: >-
+          elasticsearch/metrics-elasticsearch.stack_monitoring.enrich-47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+        data_stream:
+          dataset: elasticsearch.stack_monitoring.enrich
+          type: metrics
+        metricsets:
+          - enrich
+        hosts:
+          - 'http://localhost:9200'
+        scope: node
+        period: 10s
+        ssl: null
+      - id: >-
+          elasticsearch/metrics-elasticsearch.stack_monitoring.index-47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+        data_stream:
+          dataset: elasticsearch.stack_monitoring.index
+          type: metrics
+        metricsets:
+          - index
+        hosts:
+          - 'http://localhost:9200'
+        scope: node
+        period: 10s
+        ssl: null
+      - id: >-
+          elasticsearch/metrics-elasticsearch.stack_monitoring.index_recovery-47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+        data_stream:
+          dataset: elasticsearch.stack_monitoring.index_recovery
+          type: metrics
+        metricsets:
+          - index_recovery
+        hosts:
+          - 'http://localhost:9200'
+        scope: node
+        period: 10s
+        ssl: null
+      - id: >-
+          elasticsearch/metrics-elasticsearch.stack_monitoring.index_summary-47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+        data_stream:
+          dataset: elasticsearch.stack_monitoring.index_summary
+          type: metrics
+        metricsets:
+          - index_summary
+        hosts:
+          - 'http://localhost:9200'
+        scope: node
+        period: 10s
+        ssl: null
+      - id: >-
+          elasticsearch/metrics-elasticsearch.ingest_pipeline-47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+        data_stream:
+          dataset: elasticsearch.ingest_pipeline
+          type: metrics
+        metricsets:
+          - ingest_pipeline
+        hosts:
+          - 'http://localhost:9200'
+        scope: node
+        period: null
+        ingest_pipeline.processor_sample_rate: 0.25
+      - id: >-
+          elasticsearch/metrics-elasticsearch.stack_monitoring.ml_job-47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+        data_stream:
+          dataset: elasticsearch.stack_monitoring.ml_job
+          type: metrics
+        metricsets:
+          - ml_job
+        hosts:
+          - 'http://localhost:9200'
+        scope: node
+        period: 10s
+        ssl: null
+      - id: >-
+          elasticsearch/metrics-elasticsearch.stack_monitoring.node-47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+        data_stream:
+          dataset: elasticsearch.stack_monitoring.node
+          type: metrics
+        metricsets:
+          - node
+        hosts:
+          - 'http://localhost:9200'
+        scope: node
+        period: 10s
+        ssl: null
+      - id: >-
+          elasticsearch/metrics-elasticsearch.stack_monitoring.node_stats-47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+        data_stream:
+          dataset: elasticsearch.stack_monitoring.node_stats
+          type: metrics
+        metricsets:
+          - node_stats
+        hosts:
+          - 'http://localhost:9200'
+        scope: node
+        period: 10s
+        ssl: null
+      - id: >-
+          elasticsearch/metrics-elasticsearch.stack_monitoring.pending_tasks-47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+        data_stream:
+          dataset: elasticsearch.stack_monitoring.pending_tasks
+          type: metrics
+        metricsets:
+          - pending_tasks
+        hosts:
+          - 'http://localhost:9200'
+        scope: node
+        period: 10s
+        ssl: null
+      - id: >-
+          elasticsearch/metrics-elasticsearch.stack_monitoring.shard-47028fa5-04bf-4c86-b9c0-e6fba5bee7d9
+        data_stream:
+          dataset: elasticsearch.stack_monitoring.shard
+          type: metrics
+        metricsets:
+          - shard
+        hosts:
+          - 'http://localhost:9200'
+        scope: node
+        period: 10s
+        ssl: null
